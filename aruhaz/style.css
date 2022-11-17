@@ -3,12 +3,15 @@ body{
     margin: 0;
     background-color: black;
 }
+
 *{
     box-sizing: border-box;
 }
+
 main, header, nav, article, aside, footer{
     border: 1px solid dimgrey;
 }
+
 main{
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
@@ -20,48 +23,88 @@ main{
     background-color: brown;
     margin: 20px;
 }
+
 header{
     grid-area: h;
+    color: white;
 }
+
 h1{
     font-size: 40px;
 }
+
 nav{
     grid-area: n;
     background-color: burlywood;
-    margin: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
     display: grid;
+    padding-bottom: 25px;
 }
+
 article{
     grid-area: a;
     display: grid;
     grid-template-columns: 3fr 3fr 3fr;
-    margin: 20px;
-    padding: 20px;
-    grid-gap: 20px;
+    margin: 30px;
+    padding: 30px;
+    grid-gap: 30px;
     background-color: burlywood;
 }
+
 aside{
     grid-area: as;
     background-color: burlywood;
-    margin: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 10px;
 }
+
 footer{
     grid-area: f;
     background-color: brown;
+    color: white;
 }
+
 img{
-    width: 100%;
+    width: 80%;
 }
 
 .kep{
     text-align: center;
 }
-nav ul{
-    list-style-type: none;
+
+.kep img:hover{
+    width: 130%;
+    margin-right: 20px;
+    padding-right: 20px;
 }
+
+nav ul{
+    display: grid;
+    list-style-type: none;
+    grid-template-columns: 1fr 1fr 1fr 4fr;
+    gap: 10px;
+}
+
 nav a{
     text-decoration: none;
+}
+
+a:visited{
+    color: black;
+}
+
+a:hover{
+    color: chartreuse;
+    font-size: 25px;
+    padding-bottom: 25px;
+}
+
+a:link{
+    color: black;
 }
 
 @media screen and (max-width: 600px) {
@@ -80,6 +123,12 @@ nav a{
         margin: 10px;
         padding: 20px;
         grid-gap: 20px;
+    }
+    nav ul{
+        display: grid;
+        list-style-type: none;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
     }
 }
 
@@ -100,5 +149,11 @@ nav a{
         margin: 10px;
         padding: 20px;
         grid-gap: 20px;
+    }
+    nav ul{
+        display: grid;
+        list-style-type: none;
+        grid-template-columns: 1fr;
+        gap: 10px;
     }
 }
