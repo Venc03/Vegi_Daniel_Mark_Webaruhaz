@@ -1,0 +1,56 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+*{
+    box-sizing: border-box;
+}
+main, header, nav, article, aside, footer{
+    border: 1px solid dimgrey;
+}
+main{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: 
+    "h h h"
+    "n a as"
+    "f f f";
+}
+header{
+    grid-area: h;
+}
+nav{
+    grid-area: n;
+}
+article{
+    grid-area: a;
+}
+aside{
+    grid-area: as;
+}
+footer{
+    grid-area: f;
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        grid-template-columns: 3fr 1fr;
+        grid-template-areas:
+            "h h"
+            "n n"
+            "a as"
+            "f f";
+        }
+}
+
+@media screen and (max-width: 400px) {
+    main {
+        grid-template-columns: 3fr 1fr;
+        grid-template-areas:
+            "h"
+            "n"
+            "a"
+            "as"
+            "f";
+        }
+}
