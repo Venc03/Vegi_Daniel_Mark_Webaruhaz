@@ -1,7 +1,8 @@
 body{
     padding: 0;
     margin: 0;
-    background-color: black;
+    background: rgb(195,34,116);
+background: linear-gradient(0deg, rgba(195,34,116,1) 13%, rgba(206,253,45,1) 83%);
 }
 
 *{
@@ -20,13 +21,16 @@ main{
     "n n n"
     "a a as"
     "f f f";
-    background-color: brown;
     margin: 20px;
 }
 
 header{
     grid-area: h;
     color: white;
+background: rgb(195,34,116);
+    background: linear-gradient(0deg, rgba(195,34,116,1) 13%, rgba(206,253,45,1) 83%);
+    font-weight: bold;
+    text-align: center;
 }
 
 h1{
@@ -36,11 +40,10 @@ h1{
 nav{
     grid-area: n;
     background-color: burlywood;
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 10px;
+    padding: 20px;
     display: grid;
-    padding-bottom: 25px;
+    border-radius: 10px;
 }
 
 article{
@@ -51,35 +54,41 @@ article{
     padding: 30px;
     grid-gap: 30px;
     background-color: burlywood;
+    border-radius: 10px;
 }
 
 aside{
     grid-area: as;
     background-color: burlywood;
-    margin-right: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px;
     gap: 10px;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: end;
+
 }
 
 footer{
     grid-area: f;
-    background-color: brown;
     color: white;
+    background: rgb(195,34,116);
+    background: linear-gradient(0deg, rgb(206,253,45,1) 13%, rgb(195,34,116,1) 83%);
+    font-weight: bold;
+    text-align: center;
 }
 
 img{
     width: 80%;
+    border-radius: 10px;
 }
 
 .kep{
     text-align: center;
+    height: 600px;
 }
 
 .kep img:hover{
-    width: 130%;
-    margin-right: 20px;
-    padding-right: 20px;
+    width: 110%;
 }
 
 nav ul{
@@ -100,11 +109,44 @@ a:visited{
 a:hover{
     color: chartreuse;
     font-size: 25px;
-    padding-bottom: 25px;
+
 }
 
 a:link{
     color: black;
+}
+.kosar{
+    text-decoration: underline;
+    border-style: outset;
+    border-radius: 15px;
+    border-width: 2px;
+    text-align: center;
+    padding: 10px;
+    height: 50PX;
+}
+.kosar:hover{
+    font-size: 20px;
+    color: chartreuse;
+}
+.ar{
+    border-style: groove;
+    padding: 10px;
+    border-radius: 15px;
+}
+.nev{
+    border-style: groove;
+    font-weight: bold;
+    height: 60px;
+}
+.li{
+    text-align: center;
+    height: 30px;
+}
+a{
+    padding: 5px;
+}
+.kepszov{
+    height: 300px;
 }
 
 @media screen and (max-width: 600px) {
@@ -130,6 +172,26 @@ a:link{
         grid-template-columns: 1fr 1fr 1fr;
         gap: 10px;
     }
+    .kep{
+        height: 400px;
+    }
+    .kepszov{
+        height: 150px;
+    }
+    .nev{
+        border-style: groove;
+        font-weight: bold;
+        height: 70px;
+    }
+    .kosar{
+        text-decoration: underline;
+        border-style: outset;
+        border-radius: 15px;
+        border-width: 2px;
+        text-align: center;
+        padding: 10px;
+        height: 50PX;
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -138,8 +200,8 @@ a:link{
         grid-template-areas:
             "h"
             "n"
-            "a"
             "as"
+            "a"
             "f";
         }
     article{
@@ -155,5 +217,17 @@ a:link{
         list-style-type: none;
         grid-template-columns: 1fr;
         gap: 10px;
+    }
+    .kep{
+        text-align: center;
+        height: 500px;
+    }
+    .nev{
+        border-style: groove;
+        font-weight: bold;
+        height: 60px;
+    }
+    .kepszov{
+        height: 200px;
     }
 }
